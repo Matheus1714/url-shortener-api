@@ -8,7 +8,7 @@ export class URLController{
         const { originURL } = req.body
         const url = await URLModel.findOne({ originURL })
         if(url){
-            response.json(url)
+            res.json(url)
             return
         }
         const hash = shortid.generate()

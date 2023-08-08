@@ -1,5 +1,7 @@
 # URL Shortner
 
+![url-shortner](img/utl-shortner.png)
+
 [API SHORTNER](https://github.com/Matheus1714/url-shortner) is a project that is a solution as the challenge of the [Bootcamp Eduzz Fullstack Developer](https://www.dio.me/bootcamp/eduzz-fullstack-developer) program offered by DIO ([dio.me](https://web.dio.me/)). It is a dynamic API harnesses the power of [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/) to provide a solution for aspiring fullstack developers.
 
 ## Technologies
@@ -63,3 +65,9 @@ npm run dev
 ```shell
 npm run build:watch
 ```
+
+### Test API
+
+To test the API, POST to the [/shorten](http://localhost:5000/shorten) route using the terminal or [Postman](https://www.postman.com/).
+
+![test-postman](img/test-postman.png)

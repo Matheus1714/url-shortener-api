@@ -1,20 +1,21 @@
 {
-  "name": "url-shortner",
-  "version": "1.0.0",
-  "description": "url shortner",
-  "main": "index.js",
-  "scripts": {
-	"build:watch": "tsc -w",
-	"dev": "nodemon ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+	"name": "url-shortner",
+	"version": "1.0.0",
+	"description": "url shortner",
+	"main": "index.js",
+	"scripts": {
+		"build:watch": "tsc -w",
+		"dev": "nodemon ./dist/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
 		"@hasezoey/typegoose": "^5.9.2",
 		"@typescript-eslint/eslint-plugin": "^4.0.1",
 		"@typescript-eslint/parser": "^4.0.1",
 		"cors": "^2.8.5",
+		"dotenv": "^16.3.1",
 		"eslint": "^7.8.1",
 		"express": "^4.17.1",
 		"mongoose": "^5.10.6",

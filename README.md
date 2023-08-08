@@ -60,7 +60,7 @@ npm install
 npm run dev
 ```
 
-### Build Typescript
+### Start Project
 
 ```shell
 npm run build:watch

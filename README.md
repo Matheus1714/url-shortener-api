@@ -57,13 +57,13 @@ npm install
 ### Build Typescript
 
 ```shell
-npm run dev
+npm run build:watch
 ```
 
 ### Start Project
 
 ```shell
-npm run build:watch
+npm run dev
 ```
 
 ### Test API

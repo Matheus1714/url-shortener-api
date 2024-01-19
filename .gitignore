@@ -3,3 +3,5 @@ package-lock.json
 **/*.js
 **/*.js.map
 .env
+data
+dist

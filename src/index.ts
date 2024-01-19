@@ -15,4 +15,6 @@ const urlControler = new URLController()
 api.post('/shorten', urlControler.shorten)
 api.get('/:hash', urlControler.redirect)
 
-api.listen(5000, () => console.log('Express listening'))
+const port = process.env.port || 5000
+
+api.listen(port, () => console.log('Express listening'))

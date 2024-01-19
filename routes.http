@@ -1,0 +1,13 @@
+@base_url=http://localhost:5000
+
+###
+
+# shortener
+
+POST {{base_url}}/shorten
+content-type: application/json
+
+{
+    "originURL": "https://www.youtube.com/watch?v=9X7I3bW49S8&ab_channel=CamelliaOfficial"
+}
+

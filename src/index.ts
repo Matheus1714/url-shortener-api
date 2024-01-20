@@ -1,10 +1,12 @@
 import express from 'express'
+import cors from 'cors'
 import { URLController } from './controller/URLControle'
 import { MongoConnection } from './database/MongoConnection'
 
 require('dotenv').config()
 
 const api = express()
+api.use(cors())
 api.use(express.json())
 
 const database = new MongoConnection()

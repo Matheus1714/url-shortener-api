@@ -22,24 +22,50 @@ The dependencies used are:
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "eslint": "^7.8.1",
     "express": "^4.17.1",
-    "mongoose": "^5.10.6",
+    "mongoose": "5.10.5",
     "nodemon": "^2.0.4",
     "shortid": "^2.2.15",
     "tslint": "^6.1.3",
     "typescript": "^4.0.2"
 },
 "devDependencies": {
-    "@types/express": "^4.17.8",
-    "@types/mongoose": "^5.7.36",
+    "@types/express": "4.17.8",
+    "@types/mongoose": "5.10.5",
     "@types/shortid": "0.0.29"
 }
 ```
 
 ## Database
 
-Before run this project, create a file `.env` and copy the information from `.env.example`. Config the variable `MONGO_CONNECTION` based your cluster create from [MongoDB](https://www.mongodb.com/).
+Before run this project, create a file `.env` and copy the information from `.env.example`. Config the variable `MONGO_CONNECTION` based your cluster create from [MongoDB](https://www.mongodb.com/) or use the `docker-compose.yaml` create the database.
+
+**[Docker Compose]**
+
+```yaml
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: UW6vZjBz7HTwVdyfMAGCRY
+```
+
+```bash
+docker compose up
+```
+
+**[ENV]**
+
+Config the enviroment variable.
 
 ```env
 MONGO_CONNECTION="..."

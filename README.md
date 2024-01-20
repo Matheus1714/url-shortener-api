@@ -1,8 +1,8 @@
-# URL Shortner
+# URL Shortener
 
-![url-shortner](.github/banner.png)
+![url-shortener](.github/banner.png)
 
-[API SHORTNER](https://github.com/Matheus1714/url-shortner) is a project that is a solution as the challenge of the [Bootcamp Eduzz Fullstack Developer](https://www.dio.me/bootcamp/eduzz-fullstack-developer) program offered by DIO ([dio.me](https://web.dio.me/)). It is a dynamic API harnesses the power of [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/) to provide a solution for aspiring fullstack developers.
+[API SHORTENER](https://github.com/Matheus1714/url-shortener-api) is a project that is a solution as the challenge of the [Bootcamp Eduzz Fullstack Developer](https://www.dio.me/bootcamp/eduzz-fullstack-developer) program offered by DIO ([dio.me](https://web.dio.me/)). It is a dynamic API harnesses the power of [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/) to provide a solution for aspiring fullstack developers.
 
 ## Technologies
 

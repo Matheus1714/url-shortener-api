@@ -4,7 +4,7 @@ import express from 'express';
 import cors from 'cors';
 
 import { dataSource } from './data-source';
-import { URLController } from './controller/url.controller';
+import routes from './routes'
 
 dataSource
   .initialize()
@@ -12,17 +12,13 @@ dataSource
     console.log("Data Source has been initialized!")
 
     const api = express();
+
     api.use(cors());
     api.use(express.json());
 
-    const urlControler = new URLController();
+    api.use(routes);
 
-    api.post('/shorten', urlControler.shorten);
-    api.get('/:hash', urlControler.redirect);
-
-    const port = process.env.port || 5000;
-
-    api.listen(port, () => console.log('Express listening'));
+    api.listen(process.env.PORT, () => console.log(`Server is running on port ${process.env.PORT}`));
   })
   .catch((err) => {
     console.error("Error during Data Source initialization:", err)

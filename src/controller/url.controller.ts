@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import shortid from 'shortid';
 import { dataSource } from '../data-source';
-import { URLEntity } from '../entity/url.entity';
+import { URLEntity } from '../entities/url.entity';
 
 export class URLController {
     public async shorten(req: Request, res: Response): Promise<void> {

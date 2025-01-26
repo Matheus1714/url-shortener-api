@@ -1,22 +1,30 @@
-import express from 'express'
-import cors from 'cors'
-import { URLController } from './controller/URLControle'
-import { MongoConnection } from './database/MongoConnection'
+require('dotenv').config();
 
-require('dotenv').config()
+import express from 'express';
+import cors from 'cors';
 
-const api = express()
-api.use(cors())
-api.use(express.json())
+import { dataSource } from './data-source';
+import { URLController } from './controller/url.controller';
 
-const database = new MongoConnection()
-database.connect()
+dataSource
+  .initialize()
+  .then(() => {
+    console.log("Data Source has been initialized!")
 
-const urlControler = new URLController()
+    const api = express();
+    api.use(cors());
+    api.use(express.json());
 
-api.post('/shorten', urlControler.shorten)
-api.get('/:hash', urlControler.redirect)
+    const urlControler = new URLController();
 
-const port = process.env.port || 5000
+    api.post('/shorten', urlControler.shorten);
+    api.get('/:hash', urlControler.redirect);
 
-api.listen(port, () => console.log('Express listening'))
+    const port = process.env.port || 5000;
+
+    api.listen(port, () => console.log('Express listening'));
+  })
+  .catch((err) => {
+    console.error("Error during Data Source initialization:", err)
+  });
+

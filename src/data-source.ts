@@ -11,6 +11,9 @@ export const dataSource = new DataSource({
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   entities: [`${__dirname}/**/entities/*.{ts,js}`],
-	migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
+  migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
   logging: process.env.NODE_ENV === 'development',
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });

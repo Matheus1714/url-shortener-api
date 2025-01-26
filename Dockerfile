@@ -10,4 +10,6 @@ RUN npx tsc
 
 EXPOSE 5000
 
-CMD ["/home/node/app/start.sh"]
+RUN npm run migration:run
+
+CMD [ "npm", "start"]
